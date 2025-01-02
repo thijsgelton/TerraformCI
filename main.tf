@@ -6,14 +6,14 @@ terraform {
       version  = "3.43.0"
     }
   }
-  cloud { 
-    
-    organization = "RiverCityAI" 
+  cloud {
 
-    workspaces { 
-      name = "remotestate" 
-    } 
-  } 
+    organization = "RiverCityAI"
+
+    workspaces {
+      name = "remotestate"
+    }
+  }
 }
 
 provider "azurerm" {
@@ -22,9 +22,9 @@ provider "azurerm" {
 }
 
 resource "random_string" "uniquestring" {
-  length           = 20
-  special          = false
-  upper            = false
+  length  = 20
+  special = false
+  upper   = false
 }
 
 resource "azurerm_resource_group" "rg" {
